@@ -1,8 +1,8 @@
-# Training 2021/04/02
-## Web Protocols (REST, gRPC) ### - Software Engineering
+# Web Protocols (REST, gRPC)
+### Training 2021/04/02 - Software Engineering
 Focusing on web development.
 
 More coming soon...
 
-Links:
+## Links:
 - [ASP.NET Web APIs](https://dotnet.microsoft.com/apps/aspnet/apis)
