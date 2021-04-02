@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "HelloGrpcService.Protos";
+
+package calculator;
+
+service calculator
+{
+	rpc Add (AddRequest) returns (AddReply);
+}
+
+message AddRequest
+{
+	double value01 = 1;
+	double value02 = 2;
+}
+
+message AddReply
+{
+	double result = 1;
+}

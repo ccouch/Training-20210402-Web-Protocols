@@ -1,8 +1,10 @@
 ﻿using Grpc.Net.Client;
 using HelloGrpcService;
+using HelloGrpcService.Protos;
 using System;
 using System.Threading.Tasks;
 using static HelloGrpcService.Greeter;
+using static HelloGrpcService.Protos.calculator;
 
 namespace HelloGrpcClientApp
 {
@@ -38,6 +40,8 @@ namespace HelloGrpcClientApp
             Console.WriteLine("Response Recieved:");
             Console.WriteLine($"Message: {response.Message}");
 
+            await Add(channel, 4, 6);
+
             Console.WriteLine(string.Empty);
             Console.WriteLine("End");
             
@@ -45,5 +49,32 @@ namespace HelloGrpcClientApp
 
 
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static async Task Add(
+            GrpcChannel channel, 
+            double value01, 
+            double value02)
+        {
+
+            var client = new calculatorClient(channel: channel);
+
+            var request = new AddRequest 
+            { 
+                Value01 = value01, 
+                Value02 = value02 
+            };
+
+            var reply = await client.AddAsync(request);
+
+            Console.WriteLine("");
+            Console.WriteLine("Response Recieved:");
+            Console.WriteLine($"{value01} + {value02} = {reply.Result}");
+            Console.WriteLine("");
+
+        }
+        
     }
 }

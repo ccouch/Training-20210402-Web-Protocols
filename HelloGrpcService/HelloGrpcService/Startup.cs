@@ -37,6 +37,7 @@ namespace HelloGrpcService
                 
                 // Mapping gRPC Service
                 endpoints.MapGrpcService<GreeterService>();
+                endpoints.MapGrpcService<HelloGrpcService.Services.CalculatorService>();
 
                 endpoints.MapGet("/", async context =>
                 {
