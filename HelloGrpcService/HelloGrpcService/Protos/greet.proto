@@ -1,0 +1,49 @@
+/*
+ * Contains the service and message contracts / definitions.
+ * 
+ * Services are functions that can be called by the client to be performed on the server.
+ * Messages are the packages sent to or recieved from the server.
+ */
+
+syntax = "proto3";
+
+option csharp_namespace = "HelloGrpcService";
+
+package greet;
+
+// The greeting service definition.
+
+service Greeter {
+
+  /*
+   * Sends a greeting
+   *
+   * Unity Call => Single request and single response.
+   *
+   * Sends a HelloRequest from the client to the server and returns a HelloReply from the server to the client.
+   */
+  rpc SayHello (HelloRequest) returns (HelloReply);
+
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
+
+/*
+ * Notes:
+ *	- Once built with MSBuild, it will generate stubs that can be used to write a service or a 
+ *	client.
+ *		- On the server you will fill out the implementation for the services.
+ *		- On the client you will be able to invoke the service calls.
+ *
+ *	- Connected Services (Service Reference is what it is called in the video)
+ *		- ...
+ *
+ */
