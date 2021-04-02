@@ -41,7 +41,7 @@
 
 ### Videos 
 
- - **[Introduction to gRPC - Video](https://stackoverflow.com/questions/31890717/adding-a-readme-md-file-to-a-c-sharp-project-in-visual-studio-2015)**
+ - **[Introduction to gRPC - Video](https://www.youtube.com/watch?v=ru5x_hDZ9Qw)**
    - In this episode, Robert is joined by Sourabh Shirhatti, who shows how to build a gRPC service with Visual Studio. Sourabh starts with an introduction to gRPC, a language agnostic, high-performance Remote Procedure Call (RPC) framework, and reviews why it was created and what benefits it has over other ways of building services. Sourabh then creates a service from scratch in Visual Studio and then builds an app to call it.
    
 ---
