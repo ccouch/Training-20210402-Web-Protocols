@@ -5,12 +5,12 @@
 - [ ] Clone Repo
 - [ ] Watch Video
 - [ ] Run existing code
-- [ ] Create Mathamatics Service
-  - [ ] Create Mathamatics Proto File. This file should have an `Add` RPC with an AddRequest and AddReply message.
+- [ ] Create Calculator Service
+  - [ ] Create Calculator Proto File. This file should have an `PerformAddition` RPC with an AdditionRequest and AdditionReply message.
   - [ ] Generate the server side `stub`
-  - [ ] Implement the `Add` RPC in the Mathamatics service.
-  - [ ] In the client app, add a service reference to the Mathamatics Proto file.
-  - [ ] Update the client program to call the `Add` method.
+  - [ ] Implement the `PerformAddition` RPC in the Calculator service.
+  - [ ] In the client app, add a service reference to the Calculator Proto file.
+  - [ ] Update the client program to call the `PerformAddition` method.
   - [ ] Run your code
 - [ ] Give this training 5 stars! 
 - [ ] Enjoy your weekend!
